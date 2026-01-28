@@ -1,0 +1,93 @@
+/* sau này xem lại nhớ đọc kĩ các comment note lại cho nhớ nhé dmanhz tương lai */
+/* set các giá trị mặc định sau khi reset  */
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size : 62.5%;    /* cài đặt để cho tương đương 1rem = 10px*/
+}
+body{
+    font-size: 1.6rem;    /* khôi phục lại cỡ chữ mặc định theo rem */
+    /* font-family: "Playfair Display", serif; */
+    font-family: "Google Sans Code", monospace;
+}
+
+/* ==================common=================== */
+a{
+    text-decoration: none;
+}
+
+/* độ rộng của tất cả các phần tử (bao gồm header) đều rộng 1170 px */
+/* xét độ rộng header */
+.main-content{
+    width: 1170px;
+    max-width: calc(100% - 48px);   /* cách đều 2 bên trái phải mỗi bên tối thiểu 24px khi bị co dãn */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn{
+    display: inline-block;
+    line-height: 50px;   /* trên figma chiều cao của nút bấm là 50px */
+    min-width: 118 px;   /* trên figma chiều rộng tối thiểu của các nút bấm là 118 px */    
+    padding: 0px 16px;   /* khoảng đệm giữa nút và chữ */
+    color : white;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;   /* độ in đậm */
+    border-radius: 24.5px;
+    background: #000;
+}
+
+/* =====================Header======================= */
+.header{
+    background: #e9e4c5;
+}
+
+.header.fixed{
+    position: sticky;
+    top : -28px;    /* để khi lướt xuống mà vẫn giữ cái vị trí trên cùng cũng là 8px cho gọn thì đang có 36px trừ 28px là còn 8px sẽ giữ cứng lại khi lướt xuống */
+}
+.header .body{
+    display: flex;
+    align-items: center;   /*căn giữa các items */
+    padding : 36px 0 8px;
+}
+.nav ul{
+    display: flex;
+}
+.nav{
+    margin-left: auto;
+}
+.nav a{
+    color: grey;
+    font-size: 1.6rem;
+    /* background-color: red; */
+    padding: 8px 21px;    /* trên web là các phần tử cách nhau 42px nên phải để padding ngang là 21px */
+    position : relative; /* đặt vị trí cha của phần tử gạch chân */
+}
+.nav li.active a,
+.nav a:hover{
+    color : black;
+    /* scale : 1.1; thay vì để hiệu ứng nó cứ giật giật thì ta thay bằng text-shadow */
+    text-shadow: 1px 0 0 currentColor;
+
+}
+/* tạo dấu gạch chân cho thẻ a thuộc li có class active trong thanh điều hướng nav */
+.nav li.active a::after{
+    display: block;        /* phải là dạng display block mới xuất hiện dấu gạch chân được */
+    position : absolute;   /* đặt vị trí con (theo cha) trong .nav a */
+    left : 21px;       /* vì ở phần tử cha đang để padding cách 21px */
+    bottom : 6px;      /* trong phần figma trang web vào chế độ grid view để đếm số ô pixel (6 ô = 6px ) */
+    content : "";
+    width: 1.2rem;
+    height: 0.2rem;
+    border-radius: 1px;
+    background-color: black;
+}
+.header .btn-sign-up{
+    min-width: 144px;
+} 
+.header .action{
+    margin-left: 49px;   /* trên figma nó cách 70px mà button đến nav đang có sẵn 21px -> cần cách thêm 49px nữa*/
+}
