@@ -6,6 +6,11 @@
 html{
     font-size : 62.5%;    /* cài đặt để cho tương đương 1rem = 10px*/
 }
+/* đặt biến giá trị  */
+:root{
+    --font-heading : "Sen", sans-serif;
+}
+
 body{
     font-size: 1.6rem;    /* khôi phục lại cỡ chữ mặc định theo rem */
     /* font-family: "Playfair Display", serif; */
@@ -41,12 +46,13 @@ a{
 
 /* =====================Header======================= */
 .header{
-    background: #e9e4c5;
+    background: #fffcf4;
 }
 
 .header.fixed{
     position: sticky;
     top : -28px;    /* để khi lướt xuống mà vẫn giữ cái vị trí trên cùng cũng là 8px cho gọn thì đang có 36px trừ 28px là còn 8px sẽ giữ cứng lại khi lướt xuống */
+    z-index: 99;
 }
 .header .body{
     display: flex;
@@ -90,4 +96,99 @@ a{
 } 
 .header .action{
     margin-left: 49px;   /* trên figma nó cách 70px mà button đến nav đang có sẵn 21px -> cần cách thêm 49px nữa*/
+}
+
+/* ================================hero====================================== */
+.hero{
+    /* trong figma khoảng cách từ hero tới header là 64px mà header đã có khoảng đệm 8px rồi nên 64-8=56px*/
+    /* nhưng phần đệm bottom bên dưới nó là 65px nên phải thêm phần bottom 65px */
+    padding : 56px 0 65px;   
+    background: #fffcf4;
+}
+.hero .body{
+    display: flex;
+}
+
+/* ================================hero left================================ */
+
+/* trên figma cái media block bên trái rộng 570 mà tổng width là 1170 */
+/* nên lấy 570/1170 = 0.48 = 48%  */
+.hero .media-block{
+    width: 48%;
+    position : relative;
+}
+.hero .content-block{
+    width: 52%;
+}
+.hero .media-block.img{
+    width: 470px;
+    height: 685px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.hero .hero-summary{
+    position : absolute;
+    bottom: 4.8rem;
+    right: 0;
+
+    padding: 24px; /*khoảng cách 4 phía của các box con nhỏ là 24px*/
+    width: 270px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+
+}
+/* căn ngang các items trong box con */
+.hero-summary .items{
+    display: flex;
+    align-items: center;  /* căn giữa icon ở giữa 2 dòng text */
+}
+/* + .items nghĩa là chỉ tác động vào items nào nằm ở đằng sau (ko áp dụng cho items đầu tiên ) */
+.hero-summary .items + .items{
+    margin-top: 22px;
+}
+.hero .icon{
+    width: 48px;
+    height: 48px;
+}
+.hero-summary .info{
+    margin-left: 16px;
+}
+.hero-summary .label{
+    color : #5f5b53;
+    font-size: 1.4rem;
+    line-height: 1.86;
+}
+.hero-summary .title{
+    color : black;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;   /*30px -> 166.667%*/
+}
+
+/* =========================hero right ========================================= */
+.hero .content-block{
+    width: 52%;
+    padding-left: 130px;
+    padding-top: 64px;
+}
+
+.hero .heading{
+    color : black;
+    font-family: var(--font-heading);
+    font-size: 5.8rem;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: -1.16px;
+}
+
+.hero .desc{
+    margin-top: 22px;
+    color : #5f5b53;
+    font-size: 1.8rem;
+    line-height: 1.67;
+}
+
+.hero .cta-group{
+    margin-top: 38px;
 }

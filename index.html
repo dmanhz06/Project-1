@@ -31,6 +31,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css"
     />
+    <!-- nếu trong phần link dẫn dài quá muốn bôi đen nó thì dùng phím tắt  -->
+    <!-- SHIFT + ALT + RIGHT ARROW => để bôi đen hết phần link nằm trong dấu nháy kép -->
   </head>
 <body style="height: 10000px;"> <!--đặt chiều dài cho phần body-->
   <!-- header -->
@@ -64,5 +66,93 @@
         </div>
       </div>
     </header>
+
+    <!-- main -->
+    <main>
+      <div class="hero">    <!-- hero là phần appearence bắt mắt của phần main-->
+        <div class="main-content">
+          <div class="body">
+            <!-- hero block left -->
+            <div class="media-block">
+              <img src="./assets/img/guy-lesson 1.jpg" alt="ảnh giới thiệu">
+              <!-- phần khung box màu đỏ -->
+              <div class="hero-summary">
+                <!-- class items : phần box con nằm ngang trong 3 box con ở trong box màu đỏ  -->
+                 <!-- khung1 -->
+                <div class="items">
+                  <!-- phần hình ảnh nằm ở bên trái  -->
+                  <div class="icon">
+                    <img src="./assets/icon/design-ico.svg" alt="design-icon">
+                  </div>
+                  <!-- phần text nằm ở bên phải gồm dòng label nằm ở trên và title nằm ở dưới -->
+                  <div class="info">
+                    <p class="label">20 Courses</p>
+                    <p class="title">UI/UX Design</p>
+                  </div>
+                </div>
+                <!-- hết khung 1 -->
+
+                <!-- khung2 -->
+                <div class="items">
+                  <!-- phần hình ảnh nằm ở bên trái  -->
+                  <div class="icon">
+                    <img src="./assets/icon/develop-ico.svg" alt="develop-icon">
+                  </div>
+                  <!-- phần text nằm ở bên phải gồm dòng label nằm ở trên và title nằm ở dưới -->
+                  <div class="info">
+                    <p class="label">20 Courses</p>
+                    <p class="title">Development</p>
+                  </div>
+                </div>
+                <!-- hết khung 2 -->
+
+                <!-- khung3 -->
+                <div class="items">
+                  <!-- phần hình ảnh nằm ở bên trái  -->
+                  <div class="icon">
+                    <img src="./assets/icon/marketing-ico.svg" alt="marketing-icon">
+                  </div>
+                  <!-- phần text nằm ở bên phải gồm dòng label nằm ở trên và title nằm ở dưới -->
+                  <div class="info">
+                    <p class="label">30 Courses</p>
+                    <p class="title">Marketing</p>
+                  </div>
+                </div>
+                <!-- hết khung 3 -->
+              </div>
+            </div>
+            <!-- hero block right -->
+            <div class="content-block">
+              <h1 class="heading">Learn without limits and spread knowledge</h1>
+              <!-- tiêu đề h1 và description (miêu tả chú thích) -->
+              <p class="desc">
+                Build new skills for that “this is my year” feeling with courses, certificates, and degrees from world-class universities and companies.
+              </p>
+
+              <!-- cta-group là 1 box chứa 2 items là nút btn see courses và nút btn watch video -->
+              <div class="cta-group">
+              <!-- nút see courses -->
+              <a href="#!" class="btn">See courses</a>
+              <!-- nút watch video -->
+              <button class="watch-video">
+                <!-- trong nút watch video có 1 icon bên trái và text bên phải  -->
+                <div class="icon">
+                  <img src="./assets/icon/play-button.svg" alt="play-btn">
+                </div>
+                <span>Watch video</span>
+              </div>
+
+              <p class="desc">Recent engagement</p>
+              <p class="desc">
+                <strong>50K</strong> Students
+                <strong>70+</strong> Courses
+              </p>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 </body>
 </html>
