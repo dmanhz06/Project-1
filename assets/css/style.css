@@ -9,6 +9,7 @@ html{
 /* đặt biến giá trị  */
 :root{
     --font-heading : "Sen", sans-serif;
+    --primary-color : #ffb900;
 }
 
 body{
@@ -40,8 +41,12 @@ a{
     text-align: center;
     font-size: 1.6rem;
     font-weight: 600;   /* độ in đậm */
-    border-radius: 24.5px;
+    border-radius: 999px;
     background: #000;
+}
+
+.btn:hover{
+    opacity : 0.7;
 }
 
 /* =====================Header======================= */
@@ -191,4 +196,17 @@ a{
 
 .hero .cta-group{
     margin-top: 38px;
+    display: flex;
+    align-items: center;
+}
+.hero-cta{
+    background : var(--primary-color);
+    min-width: 180px;
+}
+.hero .watch-video{
+    margin-left: 28px;
+    display: flex;
+    border : none;
+    background: transparent;
+    align-items: center;
 }
