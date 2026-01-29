@@ -152,9 +152,22 @@ a{
 .hero-summary .items + .items{
     margin-top: 22px;
 }
-.hero .icon{
-    width: 48px;
-    height: 48px;
+.hero-summary .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff9e8;
+}
+
+.hero-summary .icon2 {
+  background-color: #fcefff;
+}
+
+.hero-summary .icon3 {
+  background-color: #ebeaff;
 }
 .hero-summary .info{
     margin-left: 16px;
@@ -195,18 +208,58 @@ a{
 }
 
 .hero .cta-group{
-    margin-top: 38px;
     display: flex;
     align-items: center;
+    margin-top: 38px;
 }
 .hero-cta{
+    min-width: 180px;    
+    line-height: 64px;    
     background : var(--primary-color);
-    min-width: 180px;
 }
 .hero .watch-video{
     margin-left: 28px;
     display: flex;
+    align-items: center;
     border : none;
     background: transparent;
+    cursor: pointer;    /* hiện dấu hinh con trỏ chỉ vào (pointer)*/
+}
+
+.hero .watch-video .icon{
+    display: flex;
     align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
+}
+
+.hero .watch-video span{
+    margin-left: 14px;
+    color : black;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+.hero .desc-recent{
+    margin-top: 48px;
+}
+
+.hero .stats{
+    margin-top: 8px;
+}
+/* thẻ strong thứ nhất cách chữ desc bên phải 15px */
+.hero .stats strong{
+    color : black;
+    font-family: var(--font-heading);
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 1.23;
+}
+/* thẻ strong thứ 2 cách chữ desc bên trái 28px */
+.hero .stats strong:nth-child(2){
+    margin-left: 28px;
 }
