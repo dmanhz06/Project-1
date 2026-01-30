@@ -69,6 +69,7 @@
 
     <!-- main -->
     <main>
+      <!-- phần hero -->
       <div class="hero">    <!-- hero là phần appearence bắt mắt của phần main-->
         <div class="main-content">
           <div class="body">
@@ -151,6 +152,115 @@
           </div>
         </div>
       </div>
+
+      <!-- phần popular -->
+      <div class="popular">
+      <div class="main-content"  >
+        <!-- phần popular nằm ở phần top phía trên -->
+        <div class="popular-top">
+          <!-- popular-left -->
+          <div class="info">
+            <!-- class heading lv2 là class thẻ heading h2 - có nhiều thẻ h2 giống vậy thì code trong common -->
+            <h2 class="heading-lv2">Our popular courses</h2>
+            <p class="desc">Build new skills with new trendy courses and shine for the next future career.</p>
+          </div>
+
+          <!-- popular-right -->
+          <div class="controls">
+            <button class="control-btn">
+              <!-- ko cần lấy thẻ img mà mở file pre.svg để copy code vào luôn để có thể thay đổi thông số của nó -->
+              <!-- <img src="./assets/icon/prev.svg" alt="previous"> -->
+              <!-- file .svg là 1 file dạng text editor ảnh nên khi muốn đổi dạng từ ảnh sang text
+              thì bấm vào  mũi tên góc bên phải trên cùng - cạnh nút run code và
+              chọn reopen as text editor -->
+              <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.5 0.5L0.5 6.5L6.5 12.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+
+            </button>
+            <button class="control-btn">
+              <!-- <img src="./assets/icon/next.svg" alt="next"> -->
+              <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.5 0.5L6.5 6.5L0.5 12.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+
+            </button>
+          </div>
+          
+        </div>
+
+        <!-- phần popular ở dưới - phần course list  -->
+        <!-- phần box cha bao xung quanh 3 thẻ hình ảnh box con -->
+        <div class="course-list">
+          <!-- mỗi box con là 1 thẻ hình ảnh -->
+          <!-- item1 -->
+          <div class="course-item">
+            <img src="./assets/img/learn1.jpg" alt="Basic web design" class="thumb">   <!--thumbnail nghĩa là 1 tấm ảnh nhỏ-->
+            <!-- phần box chữ đằng sau tấm hình -->
+            <div class="info">
+              <div class="head">
+                <h3 class="title">Basic web design</h3>
+                <div class="rating">
+                  <img src="./assets/icon/star.svg" alt="star" class="star">
+                  <span class="value">4.5</span>   <!-- đối vs số (number) thì nên dùng thẻ span-->
+                </div>
+              </div>
+
+              <p class="desc">Get the best course, gain knowledge and shine for your future career</p>
+
+              <div class="foot">
+                <span class="price">$120.75</span>
+                <button class="btn">Book now</button>
+              </div>
+            </div>
+          </div>
+          <!-- item2 -->
+          <div class="course-item">
+            <img src="./assets/img/learn2.jpg" alt="UI/UX design" class="thumb">   <!--thumbnail nghĩa là 1 tấm ảnh nhỏ-->
+            <!-- phần box chữ đằng sau tấm hình -->
+            <div class="info">
+              <div class="head">
+                <h3 class="title">UI/UX design</h3>
+                <div class="rating">
+                  <img src="./assets/icon/star.svg" alt="star" class="star">
+                  <span class="value">4.5</span>   <!-- đối vs số (number) thì nên dùng thẻ span-->
+                </div>
+              </div>
+
+              <p class="desc">Get the best course, gain knowledge and shine for your future career</p>
+
+              <div class="foot">
+                <span class="price">$120.75</span>
+                <button class="btn">Book now</button>
+              </div>
+            </div>
+          </div>
+          <!-- item3 -->
+          <div class="course-item">
+            <img src="./assets/img/learn3.jpg" alt="Web App design" class="thumb">   <!--thumbnail nghĩa là 1 tấm ảnh nhỏ-->
+            <!-- phần box chữ đằng sau tấm hình -->
+            <div class="info">
+              <div class="head">
+                <h3 class="title">Web App design</h3>
+                <div class="rating">
+                  <img src="./assets/icon/star.svg" alt="star" class="star">
+                  <span class="value">4.5</span>   <!-- đối vs số (number) thì nên dùng thẻ span-->
+                </div>
+              </div>
+
+              <p class="desc">Get the best course, gain knowledge and shine for your future career</p>
+
+              <div class="foot">
+                <span class="price">$120.75</span>
+                <button class="btn">Book now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
     </main>
 </body>
 </html>
