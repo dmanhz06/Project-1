@@ -59,6 +59,34 @@ a{
     cursor : pointer;
 }
 
+.main-content {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*đây là class tự động đặt dấu 3 chấm overflow nếu nó bị tràn nội dung quá nhiều */
+/* => dùng cho các thẻ tiêu đề trong phần title của các items khóa học */
+.line-clamp {
+  display: -webkit-box;
+  /* đặt biến mặc định là chỉ cần 1 dòng là xuất hiện dấu 3 chấm */
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* thẻ nào có class đồng thời này nghĩa là vừa có thuộc tính class trên và 
+thay biến line-clamp từ 1 -> 2 => nếu có 2 dòng là xuất hiện dấu 3 chấm  */
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
+/* class này có nghĩa là sẽ tự động xuống hàng nếu cái từ đó (ko có space) quá dài sẽ làm vỡ giao diện  */
+.break-all {
+  word-break: break-all;
+}
+
 /* =====================Header======================= */
 .header{
     background: #fffcf4;
