@@ -56,6 +56,7 @@ a{
 
 .btn:hover{
     opacity : 0.7;
+    cursor : pointer;
 }
 
 /* =====================Header======================= */
@@ -328,7 +329,14 @@ a{
 .popular .course-item{
     border-radius: 12px;
     background: white;
+    border: 1px solid #e2dfda;
+}
+
+.popular .course-item:hover{
+    border-radius: 12px;
+    background: white;
     box-shadow: 0px 18px 36px 0px rgba(0,0,0,0.05);
+    border: 1px solid transparent;
 }
 
 .popular .course-item .thumb{
@@ -348,7 +356,7 @@ a{
     justify-content: space-between;
 }
 
-.popular .course-item .title{
+.popular .course-item .title a{
     color : black;
     font-size: 1.8rem;
     font-weight: 600;
@@ -378,4 +386,12 @@ a{
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.67;
+}
+
+.popular .course-item .btn-book{
+    border: none;
+}
+
+.popular .course-item .btn-book:hover{
+    background: var(--primary-color);
 }
