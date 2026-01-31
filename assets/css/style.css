@@ -434,13 +434,13 @@ thay biến line-clamp từ 1 -> 2 => nếu có 2 dòng là xuất hiện dấu 
 
 .feedback-list {
   display: flex;
-  overflow: hidden;
+  overflow: hidden;    /* ẩn phần thừa */
 }
 
 .feedback-item {
   width: 100%;
   display: flex;
-  flex-shrink: 0;
+  flex-shrink: 0;   /* xác định cái box đó ko bị co lại */
 }
 
 .feedback-item .avatar {
