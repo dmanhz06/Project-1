@@ -704,3 +704,95 @@ thay biến line-clamp từ 1 -> 2 => nếu có 2 dòng là xuất hiện dấu 
   background: var(--primary-color);
   cursor: default;
 }
+
+/* =================== footer ================ */
+footer {
+  background: #2e2100;
+  padding: 96px 135px 0;
+}
+
+.footer .row {
+  /* đây là cái thanh ngang to nhất nằm dưới cùng trước phần copy right  */
+  padding-bottom: 38px;
+  border-bottom: 1px solid #59554b;
+  display: flex;
+}
+
+/* =============note============ */
+
+/* vì cột đầu tiên của footer có độ rộng khác biệt nhất nên tính trước  */
+/* độ rộng của box dòng chữ desc là 267 và khoảng cách từ box đó đến column 2 là 145 */
+/* => tổng width column1 = 267 + 145 = 412 -> 412 / 1170 (độ rộng của main-content) ~ 35% là độ rộng % của column 1 */
+.footer .row .column:first-child {
+  width: 35%;
+}
+
+/* các cột còn lại là : 100% - 35 % = 65 %  */
+/* => 65/3 = 21.6 % là độ rộng của mỗi cột (xem trong figma thấy khoảng cách độ rộng của các cột sau đều bằng 130px (bằng nhau)) */
+.footer .row .column {
+  width: 21.6%;
+}
+
+/* ==================================== */
+.footer .desc {
+  margin-top: 18px;
+  /* để là max-width để khi co lại nó vẫn co theo chứ k phải giữ nguyên  */
+  max-width: 267px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+
+.footer .socials {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.footer .title {
+  padding-bottom: 14px;
+  padding-right: 48px;
+  /* inline-block để cho cái thanh ngang chỉ tác động dài đến phần chữ dài nhất của box chứ ko phải là toàn box  */
+  display: inline-block;
+  /* cái thanh ngang ở dưới chỉ là cái border-bottom chứ ko cần phải dùng ::after như cái trên blog  */
+  /* cái nào có border-radius thì mới cần xài ::after còn ko có thì chỉ là cái border-bottom bình thường mà thôi  */
+  border-bottom: 1px solid #59554b;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.footer .list {
+  margin-top: 28px;
+}
+
+.footer .list a {
+  
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+
+/* tác động vào thẻ li cuối cùng của a ko cho có margin-bottom chung là 12px  */
+.footer .list li:last-child a {
+  margin-bottom: 0;
+}
+
+/* strong là thẻ chứ k phải class nên ko có dấu chấm  */
+.footer .list strong {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86;
+}
+
+.footer .copyright {
+  padding: 28px 0;
+  color: #807d74;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
