@@ -605,8 +605,10 @@ thay biến line-clamp từ 1 -> 2 => nếu có 2 dòng là xuất hiện dấu 
 }
 
 .blogs .item {
-  
+  /* để ko bị co lại  */
   flex-shrink: 0;
+  /* có 3 items mà gap của nó là 30px -> tổng 60 chia cho 3 còn 20px  */
+  /* tính như thế để chia 3 items là bằng nhau và cách đầu và cuối 20px  */
   width: calc(33.33% - 20px);
   border-radius: 16px;
   background: #fff;
@@ -629,13 +631,18 @@ thay biến line-clamp từ 1 -> 2 => nếu có 2 dòng là xuất hiện dấu 
 .blogs .item .date {
   position: relative;
   padding-bottom: 12px;
+  /* dùng padding-bottom: 12px để đẩy thanh ngang ở after xuống dưới ; */
   display: inline-flex;
+  /* display: inline-flex; dùng để xác định thẻ cha của nó chỉ chứa vừa với thẻ con của nó thôi - dùng để xác định chiều dài của thanh ngang after  */
   align-items: center;
   color: #5f5b53;
   font-size: 1.4rem;
   line-height: 1.86;
 }
 
+/* tạo dấu chấm tròn nhỏ đằng trước thẻ date  */
+/* phải chỉnh nó về là display inline-block vì nó thuộc kiểu định dạng nằm ngay bên cạnh chữ và là kiểu tạo kiểu  */
+/* vì before hoạt động như 1 thẻ con của nó nên muốn căn giữa chữ thì tác động display flex lên thẻ cha của nó là thẻ date  */
 .blogs .item .date::before {
   content: "";
   margin-right: 4px;
@@ -646,10 +653,13 @@ thay biến line-clamp từ 1 -> 2 => nếu có 2 dòng là xuất hiện dấu 
   background: var(--primary-color);
 }
 
+/* các gạch ngang ở dưới phần date thì dùng after  */
+/* dùng position absolute và relative ở thẻ nó và thẻ cha để tác động dấu gạch ngang đi xuống dưới  */
 .blogs .item .date::after {
   position: absolute;
   left: 0;
   bottom: 0;
+  /* muốn thanh ngang tự động co dãn tùy theo độ dài chữ thì dùng right -27px là để nó luôn cách phần tử cha của nó (dài hơn 27px về bên phải)  */
   right: -27px;
   content: "";
   display: inline-block;
@@ -689,7 +699,7 @@ thay biến line-clamp từ 1 -> 2 => nếu có 2 dòng là xuất hiện dấu 
   background: #5f5b53;
   cursor: pointer;
 }
-
+/* dot nào có đồng thời class active thì có màu vàng  */
 .blogs .dot.active {
   background: var(--primary-color);
   cursor: default;
